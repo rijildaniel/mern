@@ -288,7 +288,7 @@ instance.post('/api/students', (request, response) => {
                             {Course: student.Course, Year: student.Year, University: student.University}
                         })
                         .then((result) => {
-                            if(result >= 1)   {
+                            if(result >= 50)   {
                                 response.json({statusCode: 200, data: "Cannot add more than 50"})
                                 response.end();
                             }

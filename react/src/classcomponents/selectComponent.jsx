@@ -3,7 +3,7 @@ class SelectComponent extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            dataSource:[],
+
         }
     }
     handleChange(evt){

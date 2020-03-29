@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 class DataGridComponent extends Component {
     constructor(props) {
         super(props);
-        //contentEditable="true"
         this.state = {  }
     }
 
@@ -10,7 +9,7 @@ class DataGridComponent extends Component {
         this.props.deleteRow(value)
     }
 
-    updateRec=(value) => {
+    updateRec=(value) => {       
         this.props.updateRow(value)
     }
 

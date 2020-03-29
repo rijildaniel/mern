@@ -57,8 +57,6 @@ class StudentServiceComponent extends Component {
             });
         }
         this.props.history.push('/dashboard/displayStudents');
-        // this.setState({'students': studs});
-        // console.log(JSON.stringify(this.state.students));
     }
     // the method that has calls to all heavy operations or external async calls
     componentDidMount=()=>{
@@ -85,7 +83,7 @@ class StudentServiceComponent extends Component {
         });
     }
 
-    updateRecord(s){
+    updateRecord(s){       
         this.setState({student: s});
         this.state.update = true;
         this.props.history.push('/dashboard/createStudent');
@@ -129,6 +127,7 @@ class StudentServiceComponent extends Component {
                     StudentName: '',
                     University: '',
                     Course: '',
+                    Year: '',
                     Fees: ''
                 }, response.data.statusCode];
                 this.setState({students: student});

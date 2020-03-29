@@ -40,6 +40,7 @@ class CreateStudentComponent extends Component {
         this.setState({'StudentName':''});
         this.setState({'University':'Amravati'});
         this.setState({'Course':'IT'});
+        this.setState({'Year': 'First Year'});
         this.setState({'Fees':0});
     };
 
@@ -81,11 +82,14 @@ class CreateStudentComponent extends Component {
     }
 
     componentDidMount()    {   
+            console.log(this.props.updateValues.Year);
+        
             this.setState({disable: this.props.update})
             this.setState({'Username': this.props.updateValues.Username});
             this.setState({'StudentName':this.props.updateValues.StudentName});
             this.setState({'University': this.props.updateValues.University});
             this.setState({'Course': this.props.updateValues.Course});
+            this.setState({'Year': this.props.updateValues.Year});
             this.setState({'Fees': this.props.updateValues.Fees});
     }
 
@@ -115,7 +119,7 @@ class CreateStudentComponent extends Component {
                </div>
                <div className="form-group">
                  <label>Year</label>
-                 <SelectComponent name="Course" data={this.state.Year} selectedValue={this.getSelectedYear.bind(this)} dataSource={Year}></SelectComponent>
+                 <SelectComponent name="Year" data={this.state.Year} selectedValue={this.getSelectedYear.bind(this)} dataSource={Year}></SelectComponent>
                </div>
                <div className="form-group">
                   <label>Fees</label>

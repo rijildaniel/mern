@@ -11,12 +11,11 @@ class ValidationComponent extends Component {
     }
 
     validateForm(name, value)   {
-
         if(name === "StudentName")  {
             if(value.length > 20 || !value.match(/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/) && value !== '')   {
                 if(false !== this.state.setValidName)   {
                     this.setState({setValidName: false});
-                this.props.Valid(false);
+                    this.props.Valid(false);
                 }
             } 
             else{
@@ -59,7 +58,6 @@ class ValidationComponent extends Component {
     }
 
     render()    {
-        console.log(this.props.data);
         this.validateForm(this.props.name, this.props.data);
         if(this.props.name === 'StudentId') { 
             return (
