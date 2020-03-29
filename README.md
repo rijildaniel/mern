@@ -1,2 +1,2 @@
-# mern
+# MERN
 Simple Mern application
