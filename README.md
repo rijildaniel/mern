@@ -7,7 +7,7 @@ Simple Mern application
 2. Go to node folder- Install the package - npm install
 
 3. Edit the restapitoken.js file
-  Database parameters - Password, port
+ - Database parameters - Password, port
   
 4. Run the restapitoken.js file
  
